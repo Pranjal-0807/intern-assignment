@@ -4,6 +4,7 @@ import { fetchStocks } from "./store/slices/stockSlice";
 import { fetchStockMetadata } from "./store/slices/stockMetadataSlice";
 import Dropdown from "./components/Dropdown";
 import StockGraph from "./components/StockGraph";
+import Loader from "./components/Loader";
 import "./styles.css";
 
 const App = () => {
@@ -54,7 +55,7 @@ const App = () => {
 
   return (
     <div className="app-container">
-      {loading && <p>Loading...</p>}
+      {loading && <Loader />}
       {error && <p>Error: {error}</p>}
 
       <Dropdown stocks={stockMetadata} onStockChange={handleStockChange} />

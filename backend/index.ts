@@ -12,8 +12,8 @@ app.use(
   cors({
     origin: [
       "http://localhost:3001",
-      "https://intern-assignment-amber.vercel.app/",
-      "https://intern-assignment-git-main-pranjal-agarwals-projects-7e97c080.vercel.app/",
+      "https://intern-assignment-amber.vercel.app",
+      "https://intern-assignment-git-main-pranjal-agarwals-projects-7e97c080.vercel.app",
     ],
     credentials: true,
   })
