@@ -1,6 +1,5 @@
 import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
-
 import main from "./main";
 import cors from "cors";
 
@@ -11,8 +10,11 @@ const port = process.env.PORT || 3000;
 
 app.use(
   cors({
-    // origin: process.env.CORS_ORIGIN,
-    origin: "http://localhost:3001",
+    origin: [
+      "http://localhost:3001",
+      "https://intern-assignment-amber.vercel.app/",
+      "https://intern-assignment-git-main-pranjal-agarwals-projects-7e97c080.vercel.app/",
+    ],
     credentials: true,
   })
 );
