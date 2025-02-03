@@ -5,7 +5,7 @@ export const fetchStockMetadata = createAsyncThunk(
     "stockMetadata/fetchStockMetadata",
     async (_, { rejectWithValue }) => {
         try {
-            const response = await axios.get("http://localhost:3000/api/stocks");
+            const response = await axios.get("https://intern-assignment-6fw5.onrender.com/api/stocks");
             return response.data;
         } catch (error) {
             return rejectWithValue(error.message);

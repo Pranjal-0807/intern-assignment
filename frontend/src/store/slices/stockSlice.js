@@ -5,7 +5,7 @@ export const fetchStocks = createAsyncThunk(
     "stock/fetchStocks",
     async ({ id, duration }, { rejectWithValue }) => {
         try {
-            const response = await axios.post(`http://localhost:3000/api/stocks/${id}`, { duration });
+            const response = await axios.post(`https://intern-assignment-6fw5.onrender.com/api/stocks/${id}`, { duration });
             return response.data.data;
         } catch (error) {
             return rejectWithValue(error.message);
